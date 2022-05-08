@@ -12,7 +12,6 @@
     <properties>
         <kotlin.version>1.6.21</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
-        <springboot.version>2.6.7</springboot.version>
     </properties>
 
     <!-- modules -->
@@ -24,7 +23,6 @@
     <!-- deps -->
     <dependencyManagement>
         <dependencies>
-
             <!-- kotlin lang -->
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
@@ -54,15 +52,6 @@
                 <version>1.6.21</version>
                 <scope>test</scope>
             </dependency>
-
-            <!-- spring bom -->
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${springboot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -90,35 +79,6 @@
                             <id>test-compile</id>
                             <goals>
                                 <goal>test-compile</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <args>
-                            <arg>-Xjsr305=strict</arg>
-                        </args>
-                        <compilerPlugins>
-                            <plugin>spring</plugin>
-                        </compilerPlugins>
-                    </configuration>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.jetbrains.kotlin</groupId>
-                            <artifactId>kotlin-maven-allopen</artifactId>
-                            <version>${kotlin.version}</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-
-                <!-- spring boot -->
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${springboot.version}</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>repackage</goal>
                             </goals>
                         </execution>
                     </executions>
