@@ -12,7 +12,7 @@
     </parent>
 
     <groupId>br.com.florestario</groupId>
-    <artifactId>delivery</artifactId>
+    <artifactId>http</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -44,6 +44,13 @@
         <dependency>
             <groupId>br.com.florestario</groupId>
             <artifactId>core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!-- adapter -->
+        <dependency>
+            <groupId>br.com.florestario</groupId>
+            <artifactId>adapter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

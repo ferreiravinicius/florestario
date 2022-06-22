@@ -48,11 +48,11 @@
         </dependency>
 
         <!-- mongo -->
-        <dependency>
-            <groupId>org.litote.kmongo</groupId>
-            <artifactId>kmongo</artifactId>
-            <version>4.5.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.litote.kmongo</groupId>-->
+<!--            <artifactId>kmongo</artifactId>-->
+<!--            <version>4.5.1</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

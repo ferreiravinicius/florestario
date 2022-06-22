@@ -18,6 +18,7 @@
     <modules>
         <module>core</module>
         <module>http</module>
+        <module>adapter</module>
     </modules>
 
     <!-- deps -->
