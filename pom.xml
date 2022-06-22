@@ -17,7 +17,7 @@
     <!-- modules -->
     <modules>
         <module>core</module>
-        <module>delivery</module>
+        <module>http</module>
     </modules>
 
     <!-- deps -->
