@@ -47,26 +47,42 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- mongo -->
-<!--        <dependency>-->
-<!--            <groupId>org.litote.kmongo</groupId>-->
-<!--            <artifactId>kmongo</artifactId>-->
-<!--            <version>4.5.1</version>-->
-<!--        </dependency>-->
-    </dependencies>
+        <!-- postgres -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.4.0</version>
+        </dependency>
+   </dependencies>
 
     <build>
         <plugins>
+            <!-- kotlin -->
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
             </plugin>
+
+            <!-- maven compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
                     <source>8</source>
                     <target>8</target>
+                </configuration>
+            </plugin>
+
+            <!-- flyway -->
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>8.5.13</version>
+                <configuration>
+                    <url>jdbc:postgresql://localhost:5432/florestario</url>
+                    <user>user</user>
+                    <password>password</password>
+                    <locations>filesystem:./migrations</locations>
                 </configuration>
             </plugin>
         </plugins>
