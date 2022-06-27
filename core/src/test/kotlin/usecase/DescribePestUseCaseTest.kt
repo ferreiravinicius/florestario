@@ -1,5 +1,6 @@
 package usecase
 
+import entity.Organism
 import entity.Pest
 import error.NotFound
 import io.mockk.every
@@ -9,10 +10,10 @@ import org.junit.jupiter.api.assertThrows
 import port.PestRepository
 import kotlin.test.assertEquals
 
-class DescribePestilenceUseCaseTest {
+class DescribePestUseCaseTest {
 
     private val mockPestRepository = mockk<PestRepository>()
-    private val sut = DescribePestilenceUseCase(mockPestRepository)
+    private val sut = DescribePestUseCase(mockPestRepository)
 
 
     @Test
@@ -27,11 +28,18 @@ class DescribePestilenceUseCaseTest {
 
     @Test
     fun `must result success when pest slug is found`() {
-        val pestMock = Pest("pestMock")
-        every { mockPestRepository.findOne(any()) }.returns(pestMock)
+        val pestRepositoryResult = Pest(
+            description = "description",
+            organism = Organism(
+               name = "organismName",
+               scientificName = "organismScientificName",
+            )
+        )
+        every { mockPestRepository.findOne(any()) }.returns(pestRepositoryResult)
         val result = sut.describe("slug")
         assert(result.isSuccess)
-        assertEquals(pestMock.name, result.getOrThrow().name)
+        assertEquals(pestRepositoryResult.description, result.getOrThrow().description)
+        assertEquals(pestRepositoryResult.organism.name, result.getOrThrow().name)
     }
 
 }

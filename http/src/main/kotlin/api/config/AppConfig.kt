@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import port.PestRepository
 import postgres.PostgresPestRepository
-import usecase.DescribePestilenceUseCase
+import usecase.DescribePestUseCase
 
 @Configuration
 class AppConfig() {
@@ -19,5 +19,5 @@ class UseCaseConfig(
 ) {
     @Bean
     fun describePestilenceUseCase() =
-        DescribePestilenceUseCase(pestRepository)
+        DescribePestUseCase(pestRepository)
 }
