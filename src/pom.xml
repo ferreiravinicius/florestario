@@ -24,7 +24,21 @@
 
     <!-- dependencies -->
     <dependencies>
+        <!-- mockk -->
+        <dependency>
+            <groupId>io.mockk</groupId>
+            <artifactId>mockk</artifactId>
+            <version>1.12.4</version>
+            <scope>test</scope>
+        </dependency>
 
+        <!-- junit5 -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-test-junit5</artifactId>
+            <version>1.7.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <!-- managed dependencies -->
@@ -42,22 +56,6 @@
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-reflect</artifactId>
                 <version>${kotlin.version}</version>
-            </dependency>
-
-            <!-- mockk -->
-            <dependency>
-                <groupId>io.mockk</groupId>
-                <artifactId>mockk</artifactId>
-                <version>1.12.4</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- junit5 -->
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-test-junit5</artifactId>
-                <version>1.7.0</version>
-                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

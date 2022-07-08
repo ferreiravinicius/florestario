@@ -64,20 +64,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <!-- junit5 -->
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test-junit5</artifactId>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- mockk -->
-        <dependency>
-            <groupId>io.mockk</groupId>
-            <artifactId>mockk</artifactId>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
