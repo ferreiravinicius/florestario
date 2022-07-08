@@ -46,12 +46,6 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
-        <!-- kotlin (inherited from parent pom) -->
-        <dependency>
-            <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-stdlib</artifactId>
-        </dependency>
-
         <!-- spring boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

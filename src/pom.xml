@@ -10,7 +10,7 @@
 
     <!-- properties -->
     <properties>
-        <kotlin.version>1.6.21</kotlin.version>
+        <kotlin.version>1.7.0</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -24,6 +24,13 @@
 
     <!-- dependencies -->
     <dependencies>
+        <!-- kotlin lang -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
+
         <!-- mockk -->
         <dependency>
             <groupId>io.mockk</groupId>
@@ -44,13 +51,6 @@
     <!-- managed dependencies -->
     <dependencyManagement>
         <dependencies>
-            <!-- kotlin lang -->
-            <dependency>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-stdlib</artifactId>
-                <version>${kotlin.version}</version>
-            </dependency>
-
             <!-- kotlin reflect -->
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
