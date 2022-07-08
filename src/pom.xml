@@ -12,16 +12,22 @@
     <properties>
         <kotlin.version>1.6.21</kotlin.version>
         <kotlin.compiler.incremental>true</kotlin.compiler.incremental>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <!-- modules -->
     <modules>
-        <module>core</module>
-        <module>http</module>
-        <module>adapter</module>
+        <module>nursery</module>
+        <module>edge</module>
+        <module>restapi</module>
     </modules>
 
-    <!-- deps -->
+    <!-- dependencies -->
+    <dependencies>
+
+    </dependencies>
+
+    <!-- managed dependencies -->
     <dependencyManagement>
         <dependencies>
             <!-- kotlin lang -->
@@ -42,7 +48,7 @@
             <dependency>
                 <groupId>io.mockk</groupId>
                 <artifactId>mockk</artifactId>
-                <version>1.12.3</version>
+                <version>1.12.4</version>
                 <scope>test</scope>
             </dependency>
 
@@ -50,7 +56,7 @@
             <dependency>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-test-junit5</artifactId>
-                <version>1.6.21</version>
+                <version>1.7.0</version>
                 <scope>test</scope>
             </dependency>
         </dependencies>
