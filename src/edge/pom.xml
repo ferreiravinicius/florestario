@@ -13,58 +13,21 @@
 
     <artifactId>edge</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>edge</name>
-    <description>Application Edge</description>
+    <description>Edge Parent Module</description>
 
-    <!-- properties -->
-    <properties>
-        <springboot.version>2.6.7</springboot.version>
-    </properties>
+    <modules>
+        <module>restapi</module>
+    </modules>
 
+    <!-- dependencies -->
     <dependencies>
-        <!-- plant care module -->
-        <dependency>
-            <groupId>br.com.florestario</groupId>
-            <artifactId>nursery</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-
-        <!-- postgres -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.4.0</version>
-        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- kotlin -->
-            <plugin>
-                <groupId>org.jetbrains.kotlin</groupId>
-                <artifactId>kotlin-maven-plugin</artifactId>
-            </plugin>
-
-            <!-- maven compiler -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-
-            <!-- flyway -->
-            <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <version>8.5.13</version>
-                <configuration>
-                    <url>jdbc:postgresql://localhost:5432/florestario</url>
-                    <user>user</user>
-                    <password>password</password>
-                    <locations>filesystem:./migrations</locations>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 </project>

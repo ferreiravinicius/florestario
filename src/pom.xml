@@ -17,9 +17,9 @@
 
     <!-- modules -->
     <modules>
-        <module>nursery</module>
         <module>edge</module>
-        <module>restapi</module>
+        <module>nursery</module>
+        <module>persistence</module>
     </modules>
 
     <!-- dependencies -->

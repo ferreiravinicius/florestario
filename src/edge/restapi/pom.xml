@@ -6,9 +6,9 @@
 
     <parent>
         <groupId>br.com.florestario</groupId>
-        <artifactId>florestario</artifactId>
+        <artifactId>edge</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>restapi</artifactId>
