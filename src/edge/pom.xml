@@ -21,13 +21,4 @@
         <module>rest</module>
         <module>persistence</module>
     </modules>
-
-    <!-- dependencies -->
-    <dependencies>
-    </dependencies>
-
-    <build>
-        <plugins>
-        </plugins>
-    </build>
 </project>
