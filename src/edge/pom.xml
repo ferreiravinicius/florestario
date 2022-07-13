@@ -8,7 +8,6 @@
         <groupId>br.com.florestario</groupId>
         <artifactId>florestario</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>edge</artifactId>
