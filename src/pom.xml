@@ -19,7 +19,6 @@
     <modules>
         <module>edge</module>
         <module>nursery</module>
-        <module>persistence</module>
     </modules>
 
     <!-- dependencies -->

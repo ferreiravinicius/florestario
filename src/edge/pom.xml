@@ -20,6 +20,7 @@
 
     <modules>
         <module>restapi</module>
+        <module>persistence</module>
     </modules>
 
     <!-- dependencies -->
