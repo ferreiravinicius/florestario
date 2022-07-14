@@ -3,7 +3,7 @@ package domain.model
 import common.emptyString
 import java.util.*
 
-//TODO: List<Symptom>
+// TODO: List<Symptom>
 // TODO: cause must be enum (or model)
 class Disease(
     val name: String,

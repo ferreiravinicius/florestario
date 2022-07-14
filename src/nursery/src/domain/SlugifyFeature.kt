@@ -1,22 +1,37 @@
 package domain
 
+class CannotSlugifyBlankText : Exception()
+
 class SlugifyFeature {
 
-    private val trimDelimiter = " "
-    private val joinSeparator = "-"
+    private val separator = "-"
 
-    fun slugify(scientificName: String): Result<String> {
+    fun slugify(text: String): Result<String> {
 
-       if (scientificName.isBlank()) {
-           return Result.failure(Exception()) //todo: chance to checked exception
-       }
+        if (text.isBlank()) {
+            return Result.failure(CannotSlugifyBlankText())
+        }
 
-        val slug = scientificName
-            .trim()
-            .split(trimDelimiter)
-            .joinToString(joinSeparator) { it.lowercase() }
+        val sb = StringBuilder()
+        var awaitingSeparator = false
+        for (i in text.indices) {
 
-        return Result.success(slug)
+            val char = text.elementAt(i)
+
+            if (char.isLetter()) {
+                sb.append(char.lowercase())
+                awaitingSeparator = true
+            } else if (char.isWhitespace() && awaitingSeparator) {
+                text.elementAtOrNull(i + 1)?.let { nextChar ->
+                    if (nextChar.isLetter()) {
+                        sb.append(separator)
+                        awaitingSeparator = false
+                    }
+                }
+            }
+        }
+
+        return Result.success(sb.toString())
     }
 }
 
