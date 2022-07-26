@@ -1,37 +1,26 @@
 package domain
 
-class CannotSlugifyBlankText : Exception()
+fun String.toSlug() = slugify(this)
 
-class SlugifyFeature {
+fun slugify(text: String): String {
+    val separator = "-"
+    val sb = StringBuilder()
+    var awaitingSeparator = false
+    for (i in text.indices) {
 
-    private val separator = "-"
+        val char = text.elementAt(i)
 
-    fun slugify(text: String): Result<String> {
-
-        if (text.isBlank()) {
-            return Result.failure(CannotSlugifyBlankText())
-        }
-
-        val sb = StringBuilder()
-        var awaitingSeparator = false
-        for (i in text.indices) {
-
-            val char = text.elementAt(i)
-
-            if (char.isLetter()) {
-                sb.append(char.lowercase())
-                awaitingSeparator = true
-            } else if (char.isWhitespace() && awaitingSeparator) {
-                text.elementAtOrNull(i + 1)?.let { nextChar ->
-                    if (nextChar.isLetter()) {
-                        sb.append(separator)
-                        awaitingSeparator = false
-                    }
+        if (char.isLetter()) {
+            sb.append(char.lowercase())
+            awaitingSeparator = true
+        } else if (char.isWhitespace() && awaitingSeparator) {
+            text.elementAtOrNull(i + 1)?.let { nextChar ->
+                if (nextChar.isLetter()) {
+                    sb.append(separator)
+                    awaitingSeparator = false
                 }
             }
         }
-
-        return Result.success(sb.toString())
     }
+    return sb.toString()
 }
-

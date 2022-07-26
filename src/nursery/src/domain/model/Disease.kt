@@ -7,10 +7,15 @@ import java.util.*
 // TODO: cause must be enum (or model)
 class Disease(
     val name: String,
-    val cause: String, // Pathogen, Environmental Condition, Animal
+    val cause: CauseGroup,
     val description: String,
     var slug: String = emptyString,
     var symptoms: List<String> = emptyList(),
     var organism: Optional<Organism> = Optional.empty() //causer
-) {
+)
+
+enum class CauseGroup {
+    ANIMAL,
+    PATHOGEN,
+    ENVIRONMENTAL_CONDITION
 }

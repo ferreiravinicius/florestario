@@ -1,10 +1,14 @@
 package domain
 
 import domain.contract.DiseaseRepository
+import domain.model.CauseGroup
 import domain.model.Disease
+import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
+import kotlin.test.assertTrue
 
 internal class CreateDiseaseFeatureTest {
 
@@ -18,15 +22,31 @@ internal class CreateDiseaseFeatureTest {
     }
 
     @Test
-    fun `must create slug before save`() {
+    fun `must create disease with success`() {
 
-        val disease = Disease(
-            name = "super scientific name here",
-            cause = "cause",
-            description = "description"
-        )
+        val disease = generateDisease()
 
+        every { mockDiseaseRepository.exists(any()) }.returns(false)
+        every { mockDiseaseRepository.create(any()) }.returns(disease)
 
+        val result = createDiseaseFeature.create(disease)
+        assertTrue { result.isSuccess }
     }
 
+    @Test
+    fun `must fail if slug already exists`() {
+        every { mockDiseaseRepository.exists(any()) }.returns(true)
+
+        val result = createDiseaseFeature.create(generateDisease())
+        assertTrue { result.isFailure }
+        assertThrows<DiseaseAlreadyExists> { result.getOrThrow() }
+    }
+
+    private fun generateDisease(): Disease {
+        return Disease(
+            name = "super scientific name here",
+            cause = CauseGroup.PATHOGEN,
+            description = "description"
+        )
+    }
 }
