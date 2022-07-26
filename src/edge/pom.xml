@@ -18,7 +18,7 @@
     <description>Edge Parent Module</description>
 
     <modules>
-        <module>rest</module>
+        <module>spring</module>
         <module>persistence</module>
     </modules>
 </project>
