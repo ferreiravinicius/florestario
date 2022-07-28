@@ -23,7 +23,7 @@
     </properties>
 
     <dependencies>
-        <!-- plant care module -->
+        <!-- module -->
         <dependency>
             <groupId>br.com.florestario</groupId>
             <artifactId>nursery</artifactId>
@@ -36,6 +36,29 @@
             <artifactId>postgresql</artifactId>
             <version>42.4.0</version>
         </dependency>
+
+        <!-- ktorm -->
+        <dependency>
+            <groupId>org.ktorm</groupId>
+            <artifactId>ktorm-core</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+
+        <!-- flyway -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>8.5.13</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.1.210</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
