@@ -1,0 +1,6 @@
+CREATE TABLE tb_disease (
+    id BIGSERIAL PRIMARY KEY,
+    description TEXT NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    slug VARCHAR(125) UNIQUE NOT NULL
+);

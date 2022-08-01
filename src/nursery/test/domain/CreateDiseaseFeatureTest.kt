@@ -1,7 +1,6 @@
 package domain
 
 import domain.contract.DiseaseRepository
-import domain.model.CauseGroup
 import domain.model.Disease
 import io.mockk.every
 import io.mockk.mockk
@@ -45,7 +44,6 @@ internal class CreateDiseaseFeatureTest {
     private fun generateDisease(): Disease {
         return Disease(
             name = "super scientific name here",
-            cause = CauseGroup.PATHOGEN,
             description = "description"
         )
     }

@@ -1,24 +1,10 @@
 import domain.contract.DiseaseRepository
-import domain.model.CauseGroup
 import domain.model.Disease
+import mapper.DiseaseQueryMapper
+import mapper.QueryMapper
 import org.ktorm.database.Database
 import org.ktorm.dsl.*
 import record.DiseaseTable
-
-interface QueryMapper<D> {
-    fun mapFrom(row: QueryRowSet): D
-}
-
-class DiseaseQueryMapper : QueryMapper<Disease> {
-    override fun mapFrom(row: QueryRowSet): Disease {
-        return Disease(
-            description = row[DiseaseTable.description]!!,
-            name = row[DiseaseTable.name]!!,
-            slug = row[DiseaseTable.slug]!!,
-            cause = CauseGroup.PATHOGEN //todo: parse correctly
-        )
-    }
-}
 
 class KtormDiseaseRepository(
     private val database: Database,
@@ -48,10 +34,9 @@ class KtormDiseaseRepository(
                 set(it.slug, disease.slug)
                 set(it.name, disease.name)
                 set(it.description, disease.description)
-                //todo: insert others
             }
         }
         return disease
     }
-    
+
 }

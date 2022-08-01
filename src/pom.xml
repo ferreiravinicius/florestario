@@ -20,6 +20,7 @@
     <modules>
         <module>edge</module>
         <module>nursery</module>
+        <module>biology</module>
     </modules>
 
     <!-- fixed dependencies -->
