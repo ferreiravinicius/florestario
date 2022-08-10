@@ -1,4 +1,4 @@
-package domain.model
+package core.entity
 
 /*
 > Plant Pest: Cochonilha-carapaca

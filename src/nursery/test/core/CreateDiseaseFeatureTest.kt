@@ -1,7 +1,7 @@
-package domain
+package core
 
-import domain.contract.DiseaseRepository
-import domain.model.Disease
+import core.contract.DiseaseRepository
+import core.entity.Disease
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.BeforeEach

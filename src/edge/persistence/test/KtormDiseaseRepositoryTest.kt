@@ -1,5 +1,5 @@
 import common.emptyString
-import domain.model.Disease
+import core.entity.Disease
 import org.flywaydb.core.Flyway
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test

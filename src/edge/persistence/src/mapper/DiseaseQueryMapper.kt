@@ -1,6 +1,6 @@
 package mapper
 
-import domain.model.Disease
+import core.entity.Disease
 import org.ktorm.dsl.QueryRowSet
 import record.DiseaseTable
 

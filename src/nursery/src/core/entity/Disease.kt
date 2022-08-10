@@ -1,4 +1,4 @@
-package domain.model
+package core.entity
 
 import common.emptyString
 
@@ -16,5 +16,5 @@ class Disease(
 enum class CauseGroup {
     ANIMAL,
     PATHOGEN,
-    ENVIRONMENTAL_CONDITION
+    ENVIRONMENT
 }

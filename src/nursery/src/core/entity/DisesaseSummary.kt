@@ -1,4 +1,4 @@
-package domain.model
+package core.entity
 
 class DiseaseSummary(
     val description: String,

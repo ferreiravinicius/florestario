@@ -1,4 +1,4 @@
-package domain
+package core
 
 fun String.toSlug() = slugify(this)
 

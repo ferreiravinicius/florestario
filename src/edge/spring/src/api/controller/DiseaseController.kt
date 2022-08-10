@@ -2,7 +2,7 @@ package api.controller
 
 import api.controller.data.CreateDiseaseConverter
 import api.controller.data.CreateDiseaseData
-import domain.CreateDiseaseFeature
+import core.CreateDiseaseFeature
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RestController

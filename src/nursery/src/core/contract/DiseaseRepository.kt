@@ -1,6 +1,6 @@
-package domain.contract
+package core.contract
 
-import domain.model.Disease
+import core.entity.Disease
 
 interface DiseaseRepository {
     fun findOneBySlug(slug: String): Disease?

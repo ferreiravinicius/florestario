@@ -1,7 +1,7 @@
-package domain
+package core
 
-import domain.contract.DiseaseRepository
-import domain.model.Disease
+import core.contract.DiseaseRepository
+import core.entity.Disease
 
 class DiseaseAlreadyExists : Exception()
 

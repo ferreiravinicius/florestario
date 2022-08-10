@@ -1,5 +1,5 @@
-import domain.contract.DiseaseRepository
-import domain.model.Disease
+import core.contract.DiseaseRepository
+import core.entity.Disease
 import mapper.DiseaseQueryMapper
 import mapper.QueryMapper
 import org.ktorm.database.Database
