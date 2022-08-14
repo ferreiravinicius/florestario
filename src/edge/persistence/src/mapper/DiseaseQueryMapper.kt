@@ -1,6 +1,6 @@
 package mapper
 
-import core.entity.Disease
+import nursery.entity.Disease
 import org.ktorm.dsl.QueryRowSet
 import record.DiseaseTable
 

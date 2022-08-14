@@ -26,7 +26,7 @@
         <!-- module -->
         <dependency>
             <groupId>br.com.florestario</groupId>
-            <artifactId>nursery</artifactId>
+            <artifactId>core</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

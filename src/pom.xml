@@ -7,7 +7,7 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <name>florestario</name>
-    <description>Florestario Primary Parent Module</description>
+    <description>Florestario Parent Pom</description>
 
     <!-- properties -->
     <properties>
@@ -19,8 +19,7 @@
     <!-- modules -->
     <modules>
         <module>edge</module>
-        <module>nursery</module>
-        <module>biology</module>
+        <module>core</module>
     </modules>
 
     <!-- fixed dependencies -->

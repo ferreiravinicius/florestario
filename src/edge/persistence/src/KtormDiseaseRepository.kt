@@ -1,7 +1,7 @@
-import core.contract.DiseaseRepository
-import core.entity.Disease
 import mapper.DiseaseQueryMapper
 import mapper.QueryMapper
+import nursery.contract.DiseaseRepository
+import nursery.entity.Disease
 import org.ktorm.database.Database
 import org.ktorm.dsl.*
 import record.DiseaseTable

@@ -2,8 +2,8 @@ package api.controller.data
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import common.emptyString
-import core.entity.CauseGroup
-import core.entity.Disease
+import domain.model.CauseGroup
+import domain.model.Disease
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class CreateDiseaseData(

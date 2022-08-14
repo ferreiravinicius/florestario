@@ -1,5 +1,4 @@
-import common.emptyString
-import core.entity.Disease
+import nursery.entity.Disease
 import org.flywaydb.core.Flyway
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
@@ -23,7 +22,7 @@ internal class KtormDiseaseRepositoryTest {
         val flyway = Flyway
             .configure()
             .locations("filesystem:./migrations")
-            .dataSource(url, emptyString, emptyString)
+            .dataSource(url, "", "")
             .load()
 
         flyway.migrate()
